@@ -1,0 +1,13 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="Downloading-JAR-files:war exploded">
+    <output-path>$PROJECT_DIR$/out/artifacts/Downloading_JAR_files_war_exploded</output-path>
+    <root id="root">
+      <element id="javaee-facet-resources" facet="Downloading-JAR-files/web/Web" />
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="Downloading-JAR-files" />
+        </element>
+      </element>
+    </root>
+  </artifact>
+</component>

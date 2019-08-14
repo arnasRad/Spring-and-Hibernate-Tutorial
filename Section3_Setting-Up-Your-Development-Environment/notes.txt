@@ -1,0 +1,50 @@
+EJB was the cause for creation of Spring framework
+
+around 2006 Java EE fixed past problems so it could do everything 
+	Spring could do but EJB had bad reputation at that time and 
+	Spring was just very popular in the industry at the moment
+
+It's recommended to learn both Spring and Java EE
+
+Goals of Spring:
+* Lightweight development with Java POJOs (Plain-Old-Java-Objects)
+* Dependency injection to promote loose coupling
+* Declarative programming with Aspect Oriented Programming (AOP)
+* Minimize boilerplate Java code
+
+Core container - main item of Spring - {Beans, Core, SpEL, Context}
+* factory creating beans
+* manage bean dependencies
+
+! AOP (Aspect Oriented Programming) - add functionality to objects declaratively 
+	(allows creation of application-wide services like logging, security, transactions, etc...)
+Infrastructure {AOP, Aspects, Instrumentation, Messaging}
+* Instrumentation - Java agents to remotely monitor your app with JMX (Java Management Extension)
+
+Data Access Layer {JDBC, ORM, Transactions, OXM, JMS}
+* for communicating with Database
+* JDBC Helper classes
+* Reduce JDBC code by 50%
+* ORM (object to Relational Mapping)
+* Integration with Hibernate and JPA
+* JMS (Java Message Service) - for sending async messages to a Message Broker
+* Spring provides helper classes for JMS
+* Transaction support (makes heavy use of AOP behind the scenes
+
+Web Layer {Servlet, WebSocket, Web, Portlet}
+* All Web related classes
+* Home of the Spring MVC framework
+
+Test Layer {Unit, Integration, Mock}
+* Supports Test-Driven-Development (TDD)
+* Mock objects and out-of-container testing
+
+
+Spring Projects
+* Additional Spring modules built on top of the core Spring Framework
+* Only use what you need...
+	- Spring Cloud, Spring Data
+	- Spring Batch, Spring Security
+	- Spring for Android, Spring Web Flow
+	- Spring Web Services, Spring LDAP
+best source of information is in spring.io website
