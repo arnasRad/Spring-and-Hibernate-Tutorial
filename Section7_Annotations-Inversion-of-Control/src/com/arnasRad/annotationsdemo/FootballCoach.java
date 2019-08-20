@@ -2,12 +2,10 @@ package com.arnasRad.annotationsdemo;
 
 import org.springframework.stereotype.Component;
 
-//@Component("thatSillyCoach")
 @Component
-public class TennisCoach implements Coach {
-
+public class FootballCoach implements Coach {
     @Override
     public String getDailyWorkout() {
-        return "Practice your backhand volley";
+        return "Dribbling drills for 20 minutes";
     }
 }
