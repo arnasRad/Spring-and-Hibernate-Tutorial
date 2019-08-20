@@ -9,3 +9,32 @@ dependency <-> helper objects
 with dependency injection you simply outsource the construction and 
 	injection of your object to an external entity
 
+Constructor Injection
+* Development process:
+	1. Define the dependency interface and class
+	2. Create a constructor in your class for injections
+	3. Configure the dependency injection in Spring config file
+
+Setter Injection
+Spring framework will inject dependencies by calling setter methods on your class
+
+* Development process:
+	1. Create setter method(s) in your class for injections
+	2. Configure the dependency injection in Spring config file
+	
+Injecting Literal Values
+* Development process:
+	1. Create setter method(s) in your class for injections
+		- create private fields and then create setter methods
+	2. Configure the injection in Spring config file
+	
+Injecting Values from a Properties File
+* Development process:
+	1. Create properties file
+	2. Load Properties file in ?Spring config file
+		- property and value pairs
+		- you can give any value you want
+		- need to be consistent with the actual value on properties file and 
+										which you use in the Spring config file
+	3. Reference Values from Properties File
+		- ${the prop name}
