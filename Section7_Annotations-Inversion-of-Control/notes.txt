@@ -1,0 +1,32 @@
+Annotations
+* Special labels / markers added to Java classes
+* Provide meta-data about the class
+* Processed at compile time or run-time for special processing
+
+Why Spring Configuration with Annotations?
+* XML configuration can be verbose
+* Configure your Spring beans with Annotations
+* Annotations minimizes the XML configuration
+
+Scanning for Component Classes
+* Spring will scan your Java classes for special annotations
+* Automatically register the beans in the Spring container
+
+* Development Process
+	1. Enable component scanning in Spring config file
+		- Spring will scan packages recursively
+	2. Add the @Component Annotation to your Java classes
+	3. Retrieve bean from Spring container
+	
+Default Component names
+* Default bean id: the class name, make first letter lower-case
+	- Class name: TennisCoach -> Default bean id: tennisCoach
+
+Example:
+
+@Component
+public class TennisCoach implements Coach {...
+
+...
+// get the bean from spring container
+Coach theCoach = context.getBean("tennisCoach", Coach.class);

@@ -1,1 +1,63 @@
 Bean Scopes and Lifecycle
+
+* Scope refers to the lifecycle of a bean
+* How long does the bean live?
+* How many instances are created?
+* How is the bean shared?
+
+Default scope: Singleton
+* Spring Container creates only one instance of the bean, by default
+* It is cached in memory
+* All requests for the bean will return a SHARED reference to the SAME bean
+
+Best use for singleton bean is for a stateless bean - where you do not 
+											need to maintain any state
+
+Additional Spring Bean Scopes
+singleton - create a single shared instance of the bean. Default scope
+prototype - creates a new bean instance for each container request
+Only used for web apps:
+request - scoped to an HTTP web request
+session - scoped to an HTTP web session
+global-session - scoped to a global HTTP web session
+
+prototype scope is good for tracking stateful data
+
+Bean Lifecycle Methods
+Container Started -> Bean Instantiated -> Dependencies Injected -> 
+	-> Internal Spring Processing -> Your Custom Init Methods -> 
+	-> Bean Is Ready For Use -> ... -> Container Is Shutdown -> 
+	-> Your Custom Destroy Method -> STOP
+
+Bean Lifecycle Methods / Hooks
+* You can add custom code during bean initialization
+	- Calling custom business logic methods
+	- Setting up handles to resources (db, sockets, file etc)
+
+* You can add custom code during bean destruction
+	- Calling custom business logic methods
+	- Clean up handles to resources (db, sockets, files etc)
+	
+Example:
+<bean id="myCoach"
+	class="com.arnasRad.springdemo.TrackCoach"
+	init-method="doMyStartupStuff"
+	destroy-method="doMyCleanupStuff">
+	...
+</bean>
+
+* Development Process
+	1. Define your methods for init and destroy
+	2. Configure the method names in Spring config file
+
+init and destroy method signatures:
+	* can have any access modifier
+	* can have any return type
+	* can have any method name
+	* cannot accept any arguments (should be no-arg)
+	
+NOTE: 
+	- for prototype scoped beans, Spring does not call the destroy method
+	- Spring does not manage the complete lifecycle of a prototype bean
+	- configured destruction lifecycle callbacks are not called in the case of prototypes
+	- this applies to both XML configuration and Annotation-based configuration
