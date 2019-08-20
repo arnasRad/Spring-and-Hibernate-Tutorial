@@ -1,0 +1,11 @@
+Dependency Injection
+
+Dependency Inversion Principle:
+	* The client delegates to calls to another object the responsibility 
+		of providing its dependencies
+
+dependency <-> helper objects
+
+with dependency injection you simply outsource the construction and 
+	injection of your object to an external entity
+

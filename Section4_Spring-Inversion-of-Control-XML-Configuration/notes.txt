@@ -1,1 +1,35 @@
 Inversion of Control (IoC)
+IoC - the design process of externalizing, the construction and management of your objects
+IoC - the approach of outsourcing the construction and management of objects
+
+NOTE: Programming outsourcing refers to the practice of delegating or 
+	handing over control of programming-related tasks to an external 
+	service provider that specializes in this field and has the resources 
+	to handle the technical and operational aspects of a programming project
+	
+!!! Software Engineering Best Practice: Code to an interface
+
+Spring Object Factory will give an appropriate implementation of a class based 
+	on a configuration file or annotation so your app is configurable
+
+Spring Container primary functions:
+* Create and manage objects (Inversion of Control)
+* Inject object's dependencies (Dependency Injection)
+
+Configuring Spring Container:
+* XML configuration file (legacy, but most legacy apps still use this)
+* Java Annotations (modern)
+* Java Source Code (modern)
+
+Spring container is generically known as ApplicationContext
+
+Spring Development Process:
+1. Configure your Spring Beans
+2. Create a Spring Container
+3. Retrieve Beans from Spring Container
+
+FAQ - frequently asked question
+
+Spring Bean is simply a Java object
+When Java objects are created by the Spring Container, then Spring refers to 
+														them as "Spring Beans"
