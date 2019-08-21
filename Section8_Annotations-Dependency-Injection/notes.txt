@@ -1,0 +1,17 @@
+Spring AutoWiring
+* For dependency injection, Spring can use auto wiring
+* Spring will look for a class that matches the property
+	- matches by type: class or interface
+* Spring will inject it automatically ... hence it is autowired
+
+Autowiring Example
+* Injecting com.arnasRad.dependencyinjection.FortuneService into a Coach implementation
+	- Spring will scan @Components
+	- Any one implements com.arnasRad.dependencyinjection.FortuneService interface???
+	- If so, let's inject them. For example: HappyFortuneService
+	
+Constructor Injection
+* Development Process
+	1. Define the dependency interface and class
+	2. Create a constructor in your class for injections
+	3. Configure the dependency injecction with @AutoWired Annotation
