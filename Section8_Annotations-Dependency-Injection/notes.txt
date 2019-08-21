@@ -5,13 +5,52 @@ Spring AutoWiring
 * Spring will inject it automatically ... hence it is autowired
 
 Autowiring Example
-* Injecting com.arnasRad.dependencyinjection.FortuneService into a Coach implementation
+* Injecting FortuneService into a Coach implementation
 	- Spring will scan @Components
-	- Any one implements com.arnasRad.dependencyinjection.FortuneService interface???
+	- Any one implements FortuneService interface???
 	- If so, let's inject them. For example: HappyFortuneService
-	
+
+AutoWiring Injection Types
+* Constructor Injection
+* Setter Injection
+* Field Injections
+
 Constructor Injection
 * Development Process
 	1. Define the dependency interface and class
 	2. Create a constructor in your class for injections
 	3. Configure the dependency injecction with @AutoWired Annotation
+
+Setter Injection
+* Inject dependencies by calling setter method(s) on your class
+
+Autowiring Example is the same as with Constructor Injection
+* Development Process
+	1. Create setter method(s) in your class for injections
+	2. Configure the dependency injection with @Autowired Annotation
+	
+Method Injecton
+Simply give @AutoWired Annotation
+
+Field Injection
+* Inject dependencies by setting field values on your class directly (even private fields)
+* Accomplished using Java Reflection
+
+* Development Process
+	1. Configure the dependency injection with AutoWired Annotation
+		- Applied directly to the field
+		- No need for setter methods
+
+
+Which Injection types should you use?
+* Choose a style. Stay consistent in your project
+
+same functionality between all injection types
+choose one you feel most comfortable with and make use of that in your application
+
+Qualifiers for Dependency Injection
+* an error will be thrown if multiple implementations of a dependency were created
+* We need to tell Spring which bean to use
+	- use @Qualifier with a specified bean ID you want to inject
+
+You can use Qualifiers for all injection types
