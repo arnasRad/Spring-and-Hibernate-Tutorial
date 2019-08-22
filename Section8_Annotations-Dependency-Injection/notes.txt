@@ -54,3 +54,25 @@ Qualifiers for Dependency Injection
 	- use @Qualifier with a specified bean ID you want to inject
 
 You can use Qualifiers for all injection types
+
+NOTE:
+* default bean names special case of when BOTH the first and second characters of the 
+									class name are upper case, the name is NOT converted
+* Spring uses the Java Beans Introspector to generate the default bean name
+
+Using @Qualifier with Constructors example:
+
+@Autowired
+public TennisCoach(@Qualifier("randomFortuneService") FortuneService theFortuneService) {
+
+	System.out.println(">> TennisCoach: inside constructor using @autowired and @qualifier");
+	
+	fortuneService = theFortuneService;
+}
+
+more on using @Qualified with Constructors: 
+https://docs.spring.io/spring/docs/current/spring-framework-reference/core.html#beans-autowired-annotation-qualifiers
+
+FAQ: How to inject properties file using Java annotations (answer is in the course)
+source code: http://www.luv2code.com/downloads/spring-hibernate/spring-props-annotation-demo.zip
+
