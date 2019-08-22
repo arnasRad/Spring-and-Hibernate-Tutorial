@@ -76,3 +76,8 @@ https://docs.spring.io/spring/docs/current/spring-framework-reference/core.html#
 FAQ: How to inject properties file using Java annotations (answer is in the course)
 source code: http://www.luv2code.com/downloads/spring-hibernate/spring-props-annotation-demo.zip
 
+NOTE:
+When Spring creates the beans it follows this g eneral process:
+	1. Construct an instance of class
+	2. Inject dependencies
+	3. Set properties etc (@Value)

@@ -1,0 +1,15 @@
+/****/
+Reminder:
+
+Bean Scopes
+	* Scope refers to the lifecycle of a bean
+	* How long does the bean live?
+	* How many instances are created?
+	* How is the bean shared?
+
+Default scope - singleton
+/****/
+
+Explicitly Specify Bean Scope with Annotations
+@Scope("singleton")
+@Scope("prototype")

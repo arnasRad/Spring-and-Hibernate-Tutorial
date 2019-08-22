@@ -19,8 +19,7 @@ public class FileFortuneService implements FortuneService {
 
     // create constructor that gets values from file and put them into data array
     public FileFortuneService() {
-        try (FileReader reader = new FileReader("src\\fortunes.txt")) {
-            BufferedReader br = new BufferedReader(reader);
+        try (BufferedReader br = new BufferedReader(new FileReader("src\\fortunes.txt"))) {
 
             ArrayList<String> dataList = new ArrayList<>();
             String str;
