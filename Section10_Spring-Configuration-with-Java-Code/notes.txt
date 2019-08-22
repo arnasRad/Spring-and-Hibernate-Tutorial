@@ -15,3 +15,14 @@ Reminder:
 	2. Add component scanning support: @ComponentScan (optional)
 	3. Read Spring Java configuration class
 	4. Retrieve bean from Spring container
+	
+	
+Defining Spring Beans with Java Code
+* Development Process
+	1. Define method to expose bean
+		- No component scan: define each bean individually in this config class
+		- the method name will be the actual bean id
+	2. Inject bean dependencies
+		- @Bean
+	3. Read Spring Java configuration class
+	4. Retrieve bean from Spring container
