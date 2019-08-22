@@ -13,7 +13,7 @@ import javax.annotation.PreDestroy;
 public class TennisCoach implements Coach {
 
     @Autowired
-    @Qualifier("randomFortuneService")
+    @Qualifier("fileFortuneService")
     private FortuneService fortuneService;
 
     // define a default constructor

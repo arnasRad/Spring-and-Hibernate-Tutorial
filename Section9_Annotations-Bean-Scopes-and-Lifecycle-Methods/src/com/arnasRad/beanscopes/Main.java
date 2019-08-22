@@ -22,6 +22,9 @@ public class Main {
         System.out.println("\nMemory location for theCoach: " + theCoach);
         System.out.println("\nMemory location for alphaCoach: " + alphaCoach + "\n");
 
+        // call FortuneService method
+        System.out.println(theCoach.getDailyFortune());
+
         // close the application context
         context.close();
     }
