@@ -1,0 +1,17 @@
+Spring Configuration with Java Code
+
+/*****/
+Reminder:
+
+3 ways of configuring Spring Container
+1. Full XML Config
+2. XML Component Scan
+3. Java Configuration Class
+
+/*****/
+
+* Development Process
+	1. Create a Java Class and annotate as @Configuration
+	2. Add component scanning support: @ComponentScan (optional)
+	3. Read Spring Java configuration class
+	4. Retrieve bean from Spring container
