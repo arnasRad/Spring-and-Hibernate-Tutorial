@@ -1,3 +1,5 @@
+@Scope Annotation
+
 /****/
 Reminder:
 
@@ -13,3 +15,38 @@ Default scope - singleton
 Explicitly Specify Bean Scope with Annotations
 @Scope("singleton")
 @Scope("prototype")
+
+
+Bean Lifecycle Method with Annotations
+
+/****/
+Reminder:
+
+* You can add custom code during bean initialization
+	- Calling custom business logic methods
+	- Setting up handles to resources (db, sockets, file etc)
+
+* You can add custom code during bean destruction
+	- Calling custom business logic method
+	- Clean up handles to resources (db, sockets, files etc)
+	
+/****/
+
+* Development Process
+	1. Define your methods for init and destroy
+	2. Add annotations: @PostConstruct and @PreDestroy
+		- @PostConstruct: code will execute after constructor and 
+									after injection of dependencies
+		- @PreDestroy: code will execute before bean is destroyed
+
+Additional details:
+	- methods can have any access modifier
+	- methods can have any return type (although void is most commonly used)
+	- methods can have any name
+	- methods cannot accept any arguments
+	
+NOTE:
+* In contrast to the other scopes, Spring does not manage the complete 
+											lifecycle of a prototype bean
+* configured destruction lifecycle callbacks are not called in the 
+													case of prototypes
