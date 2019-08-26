@@ -9,7 +9,7 @@ public class Main {
                 new AnnotationConfigApplicationContext(SportConfig.class);
 
         // retrieve bean from spring container
-        Coach theCoach = context.getBean("tennisCoach", com.arnasRad.springcodeconfig.Coach.class);
+        Coach theCoach = context.getBean("tennisCoach", Coach.class);
 
         // call a method on the bean
         System.out.println(theCoach.getDailyWorkout());

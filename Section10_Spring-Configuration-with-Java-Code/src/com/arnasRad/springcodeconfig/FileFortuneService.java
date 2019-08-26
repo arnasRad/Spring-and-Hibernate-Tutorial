@@ -1,6 +1,5 @@
 package com.arnasRad.springcodeconfig;
 
-import com.arnasRad.springcodeconfig.FortuneService;
 import org.springframework.stereotype.Component;
 
 import javax.annotation.PostConstruct;
