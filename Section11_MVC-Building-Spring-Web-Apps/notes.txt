@@ -1,0 +1,108 @@
+Spring MVC - Building Spring Web Apps
+
+What is Spring MVC?
+* Framework for building web applications in Java
+* Based on Model-View-Controller design pattern
+* Leverages features of the Core Spring Framework (IoC, DI)
+
+MVC
+
+* Big Picture:
+Web Browser --> Front Controller --> (model) --> Controller --> (model) --> View Template --> Web Browser
+
+How it works:
+* you have an incoming request coming from the browser
+* it'll encounter the Spring MVC front controller
+* request is delegated to the controller code (you create it; contains bussiness logic)
+* controller code:
+	- create a model and send the model back to the front controller and it will pass 
+		that model to your view template
+* view template is like an HTML or JSP page that takes the date and renders a 
+	response to the browser
+	
+	
+MVC Benefits
+* The Spring way of building web app UIs in Java
+* Leverage a set of reusable UI components
+* Help manage application state for web requests
+* Process form data: validation, conversion etc
+* Flexible configuration for the view layer
+
+
+MVC documentation: https://docs.spring.io/spring/docs/current/spring-framework-reference/web.html
+
+Books:
+* Plenty of Spring MVC books on Amazon
+* Search for "Spring MVC"
+
+MVC Behind the Scenes
+
+Components of a Spring MVC Application
+* A set of web pages to layout UI components
+* A collection of Spring beans (controllers, services, etc...)
+* Spring configuration (XML, Annotations or Java)
+
+How Spring MVC Works Behind the Scenes
+
+* Spring MVC Front Controller
+	- Front controller known as DispatcherServlet
+		-> part of the Spring Framework
+		-> Already developed by Spring Dev Team
+	- You will create:
+		-> Model Objects
+		-> View Templates
+		-> Controller classes
+* Controller
+	- Code created by developer
+	- Contains your business logic
+		-> Handle the request
+		-> Store / retrieve data (db, web service...)
+		-> Place data in model
+	- Send to appropriate view template
+* Model
+	- contains your data
+	- Store / retrieve data via backend systems
+		-> database, web service, etc...
+		-> use a Spring bean if you like
+	- Place your data in the model
+		-> data can be any Java object / collection
+* View Template
+	- Spring MVC is flexible
+		-> supports many view templates
+	- Most common is JSP + JSTL
+	- Developer creates a page
+		-> displays data
+	- other view templates supported
+		-> Thymeleaf, Groovy
+		-> Velocity, Freemarker, etc...
+	- for details, see:
+		-> https://docs.spring.io/spring/docs/current/spring-framework-reference/web.html#mvc-view
+
+
+Dev Environment CheckPoint
+* At this point in the video series you should have installed:
+	- Apache Tomcat
+	- Eclipse (Java EE version)
+	- Connected Eclipse to Tomcat
+Additional Things To Do
+	1. Download Spring MVC source code for this training class
+	2. Download lates Spring JAR files from Spring website
+	
+
+MVC Configuration Overview
+* Development Process 1
+	Add configurations to file: WEB-INF/web.xml
+	1. Configure Spring MVC Dispatcher Servlet
+	2. Set up URL mappings to Spring MVC Dispatcher Servlet
+		- servlet name matches with the servlet reference that you set up in step 1.
+* Development Process 2
+	Add configurations to file: WEB-INF/spring-mvc-demo-servlet.xml
+	3. Add support for Spring component scanning
+		- context:component-scan base-package="com.luv2code.springdemo"
+	4. Add support for conversion, formatting and validation
+		- mvc:annotation-driven
+	5. Configure Spring MVC View Resolver
+		- when your app provides a "view" name, Spring MVC will
+			-> prepend the prefix
+			-> append the suffix
+		- tells where to look for view files
