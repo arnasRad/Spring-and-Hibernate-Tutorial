@@ -26,3 +26,33 @@ Defining Spring Beans with Java Code
 		- @Bean
 	3. Read Spring Java configuration class
 	4. Retrieve bean from Spring container
+
+FAQ:
+* How @Bean works behind the scenes?
+	@Bean
+	public Coach swimCoach() {
+		SwimCoach mySwimCoach = new SwimCoach();
+		return mySwimCoach;
+	}
+* Please explain in detail whats happening behind the scenes for this statement:
+	return new SwimCoach(sadFortuneServcice());
+
+
+Injecting Values from Properties file
+* Develpment Process
+	1. Create Properties File
+		- name/value pairs in text file
+	2. Load Properties File in Spring config
+		- @PropertySource("classpath:reference");
+	3. Reference values from Properties File
+		- @Value("${name.value}")
+		
+FAQ: Problems with Injecting Values - Value not returning from ${foo.email}
+- this is an issue with Spring versions
+- add support to resolve ${...} properties:
+    @Bean
+    public static PropertySourcesPlaceholderConfigurer
+                    propertySourcesPlaceHolderConfigurer() {
+        
+        return new PropertySourcesPlaceholderConfigurer();
+    }
