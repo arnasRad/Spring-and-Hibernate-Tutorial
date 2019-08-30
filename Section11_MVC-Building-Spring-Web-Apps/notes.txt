@@ -106,3 +106,31 @@ MVC Configuration Overview
 			-> prepend the prefix
 			-> append the suffix
 		- tells where to look for view files
+		
+
+Creating a Spring Home Controller and View
+* Development Process
+	1. Create Controller class
+		- @Controller (inherits from @Component)
+	2. Define Controller method
+		- any method name ir permitted
+		- any number of parameters and return types is allowed
+	3. Add Request Mapping to Controller method
+		- RequestMapping("/") <- map to root
+	4. Return View Name
+	5. Develop View Page
+		- any regular HTML or JSP page
+		
+
+Reading HTML Form Data
+* Development Process
+	1. Create Controller class
+	2. Show HTML form
+		a) Create controller method to show HTML Form
+		b) Creat eView Page for HTML form
+	3. Process HTML Form
+		a) Create controller method to process HTML Form
+		b) Develop View Page for Confirmation
+
+
+Adding Data to the Spring Model
