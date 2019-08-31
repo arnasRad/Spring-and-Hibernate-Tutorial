@@ -134,3 +134,16 @@ Reading HTML Form Data
 
 
 Adding Data to the Spring Model
+
+Spring Model
+* The Model is a container for your application data
+* In your Controller
+	- You can put anything in the model
+	- strings, objects, info from database, etc...
+* Your View page (JSP) can access data from the model
+
+Code Example
+* we want to create a new mothod to process form data
+* read the form data: student's name
+* convert the name to upper case
+* add the uppercase version to the model
