@@ -147,3 +147,16 @@ Code Example
 * read the form data: student's name
 * convert the name to upper case
 * add the uppercase version to the model
+
+
+FAQ: How to use CSS, JavaScript and Images in Spring MVC Web App?
+* source code:
+	- https://gist.github.com/darbyluv2code/9a09543a226baeedc04b9a5037ca52ec
+	
+
+Deploying your App to Tomcat as a Web Application Archive (WAR) file
+* WAR is a compressed version of your web application
+	- visualize: "web" directory being compressed as a zip file with .war extension
+* WAR file format is part of the Java EE / Servlet specification
+	- all Java EE servers support this format (ie jboss, weblogic, websphere, glassfish and tomcat)
+

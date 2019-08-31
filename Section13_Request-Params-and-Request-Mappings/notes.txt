@@ -1,0 +1,12 @@
+Binding Request Params
+
+Code Example
+* We want to create a new method to process form data
+* Read the form data: student's name
+* Convert the name to uppercase
+* Add the uppercase version to the model
+
+* Bind variable using @RequestParam Annotation
+* Behind the scenes
+	- Spring will read param from request: studentName
+	- Bind it to the variable: theName
