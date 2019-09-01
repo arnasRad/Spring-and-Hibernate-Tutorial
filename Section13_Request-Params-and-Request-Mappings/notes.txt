@@ -103,3 +103,17 @@ Read list from a Java class
 * Development Process
 1. Define country options in a class
 2. Update the form
+
+
+FAQ: Use properties file to load country options
+Question: How to use properties file to load country options
+Solution:
+1. Create a properties file to hold the countries. It will be a name value pair.  
+									Country code is name. Country name is the value.
+2. Update header section for Spring config file
+3. Load the country options properties file in the Spring config file. Bean id: countryOptions
+4. Inject the properties values into your Spring Controller: StudentController.java
+5. Add the country options to the Spring MVC model. Attribute name: theCountryOptions
+6. Update the JSP page, student-form.jsp, to use the new model attribute for the 
+													drop-down list: theCountryOptions
+7. Remove all references to country option from your Student.java.  
