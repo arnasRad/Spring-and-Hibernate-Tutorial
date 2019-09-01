@@ -10,3 +10,71 @@ Code Example
 * Behind the scenes
 	- Spring will read param from request: studentName
 	- Bind it to the variable: theName
+	
+Controller Level Request Mapping
+
+Adding Request Mapping to Controller
+* Serves as parent mapping for controller
+* All request mappings on methods in the controller are relative
+* Similar to folder directory structures
+
+Conficts in Request Paths
+* when we have the same request mapping on different controllers
+	- ambiguous mapping
+	- add parent mapping for Controller (@RequestMapping("/hello"))
+
+
+FAQ: How does "processForm" work for "/hello"?
+Question: Can you please clarify how /hello isgetting appended to 
+							the jsp file action for "processForm"?
+
+
+Spring MVC Form Tags
+* Review HTML Forms
+	- HTML Forms are used to get input form the user
+
+Spring MVC Form Tags
+* Spring MVC Form Tags are the building block for a web page
+* Form Tags are configurable and reusable for a web page
+
+Data Binding
+* Spring MVC Form Tags can make use of data binding
+* Automatically setting / retrieving data from a Java object / bean
+
+Spring MVC Form Tags
+* Form tags will generate HTML for you
+	- list of tags in video 125  Spring MVC Form Tags Overview
+	- official documentation: www.luv2code.com/spring-mvc-form-tags
+
+Web Page Structure
+* JSP page with special Spring MVC Form tags:
+<html>
+	... regular html ...
+	... Spring MVC form tags ...
+	... more html ...
+</html>
+
+How To Reference Spring MVC Form Tags
+* Specify the Spring namespace at beginning of JSP file
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
+
+
+Text Fields
+
+Showing Form
+* In your Spring Controller
+	- Before you show the form, you must add a model attribute
+	- This is a bean that will hold form data for the data binding
+
+@ModelAttribute: bind form data to object
+
+* Development Process
+1. Create Student class
+2. Create Student controller class
+3. Create HTML form
+4. Create form processing code
+5. Create confirmation page
+
+
+Drop-down lists
+
