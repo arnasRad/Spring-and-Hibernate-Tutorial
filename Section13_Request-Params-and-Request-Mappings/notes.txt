@@ -78,3 +78,28 @@ Showing Form
 
 Drop-down lists
 
+Review of HTML <select> Tag
+/***/
+
+<select name="country">
+	<option>Brazil</option>
+	<option>France</option>
+	<option>Germany</option>
+	<option>India</option>
+	...
+</select>
+	
+/***/
+
+Spring MVC Tag
+* Drop-down list is represented by the tag <form:select>
+
+* Development Process
+1. Update HTML form
+2. Update Student class - add getter / setter for new property
+3. Update confirmation page
+
+Read list from a Java class
+* Development Process
+1. Define country options in a class
+2. Update the form
