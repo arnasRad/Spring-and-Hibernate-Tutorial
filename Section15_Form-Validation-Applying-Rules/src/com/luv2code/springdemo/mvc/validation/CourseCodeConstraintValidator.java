@@ -12,7 +12,13 @@ public class CourseCodeConstraintValidator
     public boolean isValid(String s,
                            ConstraintValidatorContext constraintValidatorContext) {
 
-        boolean result = s.startsWith(coursePrefix);
+        boolean result;
+
+        if (s != null) {
+            result = s.startsWith(coursePrefix);
+        } else {
+            result = true;
+        }
 
         return result;
     }

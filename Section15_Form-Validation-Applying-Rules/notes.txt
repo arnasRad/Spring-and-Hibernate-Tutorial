@@ -154,3 +154,14 @@ Create a custom Java Annotation ... from scratch
 2. Add validation rule to Customer class
 3. Display error messages on HTML form
 4. Update confirmation page
+
+
+FAQ
+Question: Is it possible to integrate multiple validation string in one 
+				annotation? For example, validate against both LUV and TOPS
+Answer: Yes. Steps:
+1. Update CourseCode.java to use an array of strings
+
+2. Update CourseCodeConstraintValidator.java to validate against array of strings
+
+3. Update Customer.java to validate using array of strings
