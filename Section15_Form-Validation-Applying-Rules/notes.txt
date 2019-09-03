@@ -133,3 +133,24 @@ How to handle input for Integer fields - Custom Message
 		-> Invalid number: Our custom message
 2. Load custom messages resource in Spring config file
 	- WebContent/WEB-INF/spring-mvc-demo-servlet.xml
+	
+
+Custom Form Validation
+* Perform custom validation based on your business rules
+	- our example: Course Code must start with "LUV"
+* Spring MVC calls our custom validation
+* Custom validation returns boolean value for pass / fail (true/false
+
+Create a custom Java Annotation ... from scratch
+* So far, we've used predefined validation rules: @Min, @Max, ...
+* For custom validation ... we will create a Custom Java Annotation
+	- @CourseCode
+
+* Development Process
+1. Create custom validation rule
+	a. Create @CourseCode annotation
+	b. Create CourseCodeConstraintValidator
+		- Helper class: contains our custom business logic for validation
+2. Add validation rule to Customer class
+3. Display error messages on HTML form
+4. Update confirmation page
