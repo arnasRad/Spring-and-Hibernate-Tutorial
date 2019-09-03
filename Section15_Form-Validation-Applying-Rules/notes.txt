@@ -88,3 +88,35 @@ White Space
 	- Remove leading and trailing white space
 * If String only as white spaces ... trim it to null
 * Will resolve our validation problem
+
+
+Validating a Number Range
+* Add a new input field on our form for: Free Passes
+* User can only enter a range: 0 to 10
+
+* Development Process
+1. Add validation rule to Customer class
+2. Display error messages on HTML form
+3. Perform validation in the Controller class
+4. Update confirmation page
+
+
+Applying Regular Expressions
+
+Regular Expressions
+* A sequence of characters that define a search pattern
+	- this pattern is used to find or match strings
+* Regular Expressions is like its own language (advanced topic)
+	- I will assume you already know about regular expressions
+* If not, then plenty of free tutorials available
+	- https://docs.oracle.com/javase/tutorial/essential/regex/
+	
+Validate a Postal Code
+* Add a new input field on our form for: Postal Code
+* User can only enter 5 chars / digits
+* Apply Regular Expressions
+
+* Development Process
+1. Add validation rule to Customer class
+2. Display error messages on HTML form
+3. Update confirmation page
