@@ -1,7 +1,7 @@
 <component name="libraryTable">
-  <library name="javax.servlet-3.0">
+  <library name="jstl-1.2">
     <CLASSES>
-      <root url="jar://$PROJECT_DIR$/lib/javax.servlet-3.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/web/WEB-INF/jstl-1.2.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />

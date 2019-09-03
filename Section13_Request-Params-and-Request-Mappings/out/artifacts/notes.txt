@@ -116,4 +116,32 @@ Solution:
 5. Add the country options to the Spring MVC model. Attribute name: theCountryOptions
 6. Update the JSP page, student-form.jsp, to use the new model attribute for the 
 													drop-down list: theCountryOptions
-7. Remove all references to country option from your Student.java.  
+7. Remove all references to country option from your Student.java.
+
+
+Radio Buttons
+Spring MVC Tag
+* A Radio Button is represented by the tag
+	<form:radiobutton>
+
+* Development Process
+1. Update HTML form
+2. Update Student class - add getter / setter for new property
+3. Update confirmation page
+
+FAQ: How to populate radiobuttons with items from Java class?
+Question: How to populate radiobuttons with items from Java class like we did with selectlist?
+Solution:
+1. Set up the data in your Student class
+2. Reference the data in your form
+
+
+Check Boxes
+Spring MVC Tag
+* A Check Box is represented by the tag
+	<form:checkbox>
+
+* Development Process
+1. Update HTML form
+2. Update Student class - add getter / setter for new property
+3. Update confirmation page

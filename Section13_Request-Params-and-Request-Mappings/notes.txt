@@ -134,3 +134,14 @@ Question: How to populate radiobuttons with items from Java class like we did wi
 Solution:
 1. Set up the data in your Student class
 2. Reference the data in your form
+
+
+Check Boxes
+Spring MVC Tag
+* A Check Box is represented by the tag
+	<form:checkbox>
+
+* Development Process
+1. Update HTML form
+2. Update Student class - add getter / setter for new property
+3. Update confirmation page
