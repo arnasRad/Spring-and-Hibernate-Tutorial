@@ -120,3 +120,16 @@ Validate a Postal Code
 1. Add validation rule to Customer class
 2. Display error messages on HTML form
 3. Update confirmation page
+
+
+How to handle input for Integer fields - Custom Message
+* Development Process
+1. Create custom error messages
+	- src/resources/messages.properties
+	- typeMismatch.customer.freePasses=Invalid number
+		-> typeMismatch: Error type
+		-> customer: Spring model attribute name
+		-> freePasses: Field name
+		-> Invalid number: Our custom message
+2. Load custom messages resource in Spring config file
+	- WebContent/WEB-INF/spring-mvc-demo-servlet.xml
