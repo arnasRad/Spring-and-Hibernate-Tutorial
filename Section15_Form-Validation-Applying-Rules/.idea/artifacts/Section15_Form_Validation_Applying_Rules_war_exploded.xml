@@ -1,0 +1,19 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="Section15_Form-Validation-Applying-Rules:war exploded">
+    <output-path>$PROJECT_DIR$/out/artifacts/Section15_Form_Validation_Applying_Rules_war_exploded</output-path>
+    <root id="root">
+      <element id="javaee-facet-resources" facet="Section15_Form-Validation-Applying-Rules/web/Web" />
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="Section15_Form-Validation-Applying-Rules" />
+        </element>
+        <element id="directory" name="lib">
+          <element id="library" level="project" name="Spring-4.3.18.RELEASE" />
+          <element id="library" level="project" name="Spring MVC-4.3.18.RELEASE" />
+          <element id="library" level="project" name="javax.servlet.jsp.jstl-1.2.1" />
+          <element id="library" level="project" name="classmate-1.3.4" />
+        </element>
+      </element>
+    </root>
+  </artifact>
+</component>

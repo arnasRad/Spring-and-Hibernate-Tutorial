@@ -1,0 +1,90 @@
+Spring MVC Form Validation
+
+The Need for Validation
+* Check the user input form for
+	- required fields
+	- valid numbers in a range
+	- valid format (postal code)
+	- custom business rule
+
+Java's Standard Bean Validation API
+* Java has a standard Bean Validation API
+* Defines a metadata model and API for entity validation
+* Not tied to either the web tier or the persistence tier
+* Available for server-side apps and also client-side JavaFX / Swing apps
+* http://www.beanvalidation.org
+
+Spring and Validation
+* Spring version 4 and higher supports Bean Validation API
+* Preferred method for validation when building Spring apps
+* Simply add Validation JARs to our project
+
+Bean Validation Features
+* is field required
+* validate length
+* validate numbers
+* validate with regular expressions
+* custom validation
+* ..
+
+Validation Annotations
+* @NotNull - checks that the annotated value is not null
+* @Min - must be a number >= value
+* @Max - must be a number <= value
+* @Size - size must match the given size
+* @Pattern - must match a regular expression pattern
+* @Future / @Past - date must be in future or past of given date
+* ..
+
+Road Map
+1. set up our development environment
+2. required field
+3. validate number range: min, max
+4. validate using regular expression (regexp)
+5. custom validation
+
+
+Hibernate
+* Hibernate started as an ORM project
+* But in recent years, they have expanded into other areas
+* They have a fully compliant JSR-303/309 imlementation
+	- not tied to ORM or database work ... separate project
+* http://www.hibernate.org/validator
+
+* Development Process
+1. Download Validation JAR files from Hibernate website
+2. Add JAR files to project
+
+
+Checking for Required Fields
+* Development Process
+1. Add validation rule to Customer class
+	- @NotNull, @Size
+2. Display error messages on HTML form
+	- form:errors
+3. Perform validation in the Controller class
+	- @Valid: perform validation rules on Customer object
+	- BindingResult holds the results of validation rule
+4. Update confirmation page
+
+NOTE:
+The BindingResult parameter must appear immediately after the model attribute.
+	- Spring MVC validation rules will be ignored if placed in any other location
+
+
+Add Pre-processing Code with @InitBinder
+
+White Space
+* Our previous exapmle had a problem with white space
+	- Last name field with all whitespace passed ... YIKES!
+	- Should have failed!
+* We need to trim whitespace from input fields
+
+@InitBinder
+* @InitBinder annotation works as a pre-processor
+* It will pre-process each web request to our controller
+* Method annotated with @InitBinder is executed
+* We will use this to trim Strings
+	- Remove leading and trailing white space
+* If String only as white spaces ... trim it to null
+* Will resolve our validation problem
