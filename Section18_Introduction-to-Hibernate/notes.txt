@@ -1,0 +1,27 @@
+Hibernate
+
+What is Hibernate?
+* A framework for persisting / saving Java objects in a database
+	- www.hibernate.org
+
+Benefits of Hibernate
+	* Hibernate handles all of the low-level SQL
+	* Minimizes the amount of JDBC code you have to develop
+	* Hibernate provides the Object-to-Relational Mapping (ORM)
+
+Object-to-Relational Mapping (ORM)
+* The developer defines mapping between Java class and database table
+
+
+How does Hibernate relate to JDBC?
+* Hibernate uses JDBC for all database communications
+
+
+Must Have Java Development Kit (JDK)
+http://www.luv2code.com/install-java
+
+Required Software
+To build Hibernate applications, you need the following:
+1. Java Integrated Development Environment (IDE)
+2. Database Server
+3. Hibernate JAR files and JDBC Driver
