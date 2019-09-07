@@ -25,3 +25,61 @@ To build Hibernate applications, you need the following:
 1. Java Integrated Development Environment (IDE)
 2. Database Server
 3. Hibernate JAR files and JDBC Driver
+
+
+* Hibernate Development Process
+1. Add Hibernate Configuration file
+2. Annotate Java Class
+3. Develop Java Code to perform database operations
+
+
+Terminology
+* Entity class - Java class that is mapped to a database table
+
+Object-to-Relational Mapping (ORM)
+Java Class <--> Hibernate <--> Database table
+
+Two Options for Mapping
+* Option 1: XML config file (legacy)
+* Option 2: Java Annotations (modern, preferred)
+
+Java Annotations
+1. Map class to database table
+	- @Entity
+	- @Table(name="table_name")
+2. Map fields to database columns
+	- @Id
+	- @Column(name="column_name")
+
+
+FAQ: Why are we using JPA Annotation instead of Hibernate?
+Answer: Hibernate implements all of the JPA annotations
+		The Hibernate team recommends the use of JPA annotations as a best practice
+		
+
+
+Hibernate CRUD features
+
+Creating and Saving Java objects
+
+* SessionFactory
+	- reads the hibernate config file
+	- creates Session objects
+	- heavy-weight object (only create it once in your application
+* Session
+	- wraps a JDBC connection
+	- main object used to save/retrieve objects
+	- short-lived object
+	- retrieved from SessionFactory
+
+Save a Java Object
+* create a student object
+* start transaction
+* save the student
+* commit the transaction
+
+
+Primary Keys
+* Uniquely identifies each row in a table
+* Must be a unique value
+* Cannot contain NULL values
