@@ -115,3 +115,19 @@ Hibernate Query Language (HQL)
 * Similar in nature to SQL
 	- where, like, order by, join, in, etc...
 
+
+Updating Objects with Hibernate
+* update one object:
+	1. get a Student object from database
+	2. set field value
+	3. commit the transaction
+* update all objects of class:
+	- session.createQuery("update ClassName set fieldName='value'").executeUpdate();
+	
+Deleting Objects with Hibernate
+* delete one object:
+	1. retrieve a Student
+	2. session.delete(studentObject);
+	3. commit the transaction
+* delete 'on the fly':
+	- session.createQuery("delete from className where fieldName=value").executeUpdate();
