@@ -1,0 +1,13 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="Section22_Advanced-Mappings:war exploded">
+    <output-path>$PROJECT_DIR$/out/artifacts/Section22_Advanced_Mappings_war_exploded</output-path>
+    <root id="root">
+      <element id="javaee-facet-resources" facet="Section22_Advanced-Mappings/web/Web" />
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="Section22_Advanced-Mappings" />
+        </element>
+      </element>
+    </root>
+  </artifact>
+</component>

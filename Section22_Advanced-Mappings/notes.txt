@@ -1,0 +1,107 @@
+Hibernate Advanced Mappings
+* In the database, you most likely will have:
+	- Multiple Tables
+	- Relationships between Tables
+* Need to model this with Hibernate
+
+* One-to-One
+	- An instructor can have an "instructor detail" entity
+		-> similar to an "instructor profile"
+* One-to-Many
+	- An instructor can have many courses
+* Many-to-One
+	- A course can have many instructors, many courses can map to one instructor
+* Many-to-Many
+	- A course can have many students
+	- A student can have many courses
+	
+
+Important Database Concepts
+
+Primary and Foreign key
+* Primary key: identify a unique row in a table
+* Foreign key
+	- link tables together
+	- a field in one table that refers to primary key in another table
+
+Cascade
+* you can cascade operations
+* apply the same operation to related entities
+* if we delete an instructor, we should also delete their instructor_detail
+	- CASCADE DELETE
+	- depends on the use case
+	- can configure cascading
+
+Fetch Types: Eager vs Lazy Loading
+* When we fetch / retrieve data, should we retrieve EVERYTHING?
+	- Eager will retrieve everything
+	- Lazy will retrieve on request
+
+Uni-Directional Relationship
+* by loading one object you can access a related object
+
+Bi-Directional Relationship
+* by loading either of the related objects you can access another
+
+
+
+@One-to-One Mapping
+
+Uni-Directional example
+* Development Process
+1. Prep Work - Define database tables
+	- CREATE TABLE 'instructor_detail' (
+		'id' int(11) NOT NULL AUTO_INCREMENT,
+		'youtube_channel' varchar(128) DEFAULT NULL,
+		'hobby' varchar(45) DEFAULT NULL,
+		PRIMARY KEY ('id')
+	};
+	- CREATE TABLE 'instructor' (
+		'id' int(11) NOT NULL AUTO_INCREMENT,
+		'first_name' varchar(45) DEFAULT NULL,
+		'last_name' varchar(45) DEFAULT NULL,
+		'email' varchar(45) DEFAULT NULL,
+		'instructor_detail_id' int(11) DEFAULT NULL,
+		
+		PRIMARY KEY ('id')
+	);
+2. Create InstructorDetail class
+3. Create Instructor class 
+	- @OneToOne
+	- @JoinColumn(name="instructor_detail_id")
+4. Create Main App
+
+Defining Foreign Key
+* CONSTRAINT 'FK_DETAIL' FOREIGN KEY ('instructor_detail_id')
+	REFERENCES 'instructor_detail' ('id')
+
+More on Foreign Key
+* Main purpose is to preserve relationship between tables
+	- Referential Integrity
+* Prevents operations that would destroy relationship
+* Ensures only valid data is inserted into the foreign key column
+	- Can only contain valid reference to primary key in other table
+	
+Entity Lifecycle
+* basically a set of states that a Hibernate entity can go through when 
+										you're using it in your application
+* session method calls - see diagram with explanations in video 206 4:00
+
+@OneToOne - Cascade Types
+* PERSIST
+* REMOVE
+* REFRESH
+* DETACH
+* MERGE
+* ALL
+* @OneToOne(cascade=CascadeType.ALL)
+	- By default, no operations are cascaded
+* Configure multiple cascade types
+	- @OneToOne(cascade={CascadeType.DETACH,
+							CascadeType.MERGE,
+							CascadeType.PERSIST,
+							CascadeType.REFRESH
+							...
+						})
+
+BONUS: Delete an Instructor

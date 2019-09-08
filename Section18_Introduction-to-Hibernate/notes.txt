@@ -131,3 +131,6 @@ Deleting Objects with Hibernate
 	3. commit the transaction
 * delete 'on the fly':
 	- session.createQuery("delete from className where fieldName=value").executeUpdate();
+	
+
+FAQ: How can I read date strings from the command-line and store them as dates in the database?
