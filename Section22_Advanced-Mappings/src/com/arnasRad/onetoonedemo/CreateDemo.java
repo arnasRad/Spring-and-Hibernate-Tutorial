@@ -7,6 +7,8 @@ import org.hibernate.cfg.Configuration;
 
 import java.util.List;
 
+import static com.arnasRad.onetoonedemo.HibernateUtils.createInstructor;
+
 public class CreateDemo {
     public static void main(String[] args) {
         // create session factory
@@ -19,16 +21,25 @@ public class CreateDemo {
 
         try {
 
-//            createInstructor(
-//                    factory,
-//                    "Madhu",
-//                    "Patel",
-//                    "madhu@luv2code.com",
-//                    "http://www.youtube.com",
-//                    "Guitar"
-//            );
+            createInstructor(
+                    factory,
+                    "Madhu",
+                    "Patel",
+                    "madhu@luv2code.com",
+                    "http://www.youtube.com",
+                    "Guitar"
+            );
 
-            HibernateUtils.deleteInstructorById(factory, 5);
+            createInstructor(
+                    factory,
+                    "Arnas",
+                    "Radzevicius",
+                    "arnas@gmail.com",
+                    "http://www.youtube.com",
+                    "coding"
+            );
+
+//            HibernateUtils.deleteInstructorById(factory, 5);
 
 //            deleteAllInstructors(factory);
 //            deleteAllInstructorDetails(factory);
