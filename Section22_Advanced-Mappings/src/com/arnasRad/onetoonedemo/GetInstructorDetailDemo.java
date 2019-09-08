@@ -16,8 +16,8 @@ public class GetInstructorDetailDemo {
                 .addAnnotatedClass(InstructorDetail.class)
                 .buildSessionFactory();
 
+        Session session = factory.getCurrentSession();
         try {
-            Session session = factory.getCurrentSession();
             // begin transaction
             session.beginTransaction();
 
@@ -33,7 +33,12 @@ public class GetInstructorDetailDemo {
 
             // commit the transaction
             session.getTransaction().commit();
+        } catch (Exception e) {
+            e.printStackTrace();
         } finally {
+            // handle connection leak issue
+            session.close();
+
             factory.close();
         }
     }
