@@ -19,14 +19,16 @@ public class CreateDemo {
 
         try {
 
-            createInstructor(
-                    factory,
-                    "Madhu",
-                    "Patel",
-                    "madhu@luv2code.com",
-                    "http://www.youtube.com",
-                    "Guitar"
-            );
+//            createInstructor(
+//                    factory,
+//                    "Madhu",
+//                    "Patel",
+//                    "madhu@luv2code.com",
+//                    "http://www.youtube.com",
+//                    "Guitar"
+//            );
+
+            deleteInstructorById(factory, 5);
 
 //            deleteAllInstructors(factory);
 //            deleteAllInstructorDetails(factory);
@@ -144,15 +146,27 @@ public class CreateDemo {
 
         session.getTransaction().commit();
     }
-//
-//    private static void deleteEmployeeById(SessionFactory factory, String id) {
-//        Session session = factory.getCurrentSession();
-//        session.beginTransaction();
-//
-//        // delete employee by primary id
-//        Employee roseEmployee = session.get(Employee.class, id);
-//        session.delete(roseEmployee);
-//
-//        session.getTransaction().commit();
-//    }
+
+    private static void deleteInstructorById(SessionFactory factory, int id) {
+        Session session = factory.getCurrentSession();
+        session.beginTransaction();
+
+        System.out.println("Deleting Instructor by id...");
+
+        // get instructor by primary key / id
+        Instructor instructor = session.get(Instructor.class, id);
+
+        System.out.println("Found instructor: " + instructor);
+
+        // delete the instructor
+        if (instructor != null) {
+            System.out.println("Deleting " + instructor);
+
+            // Note: will ALSO delete associated "details" object
+            // because of CascadeType.ALL
+            session.delete(instructor);
+        }
+
+        session.getTransaction().commit();
+    }
 }
