@@ -104,4 +104,29 @@ Entity Lifecycle
 							...
 						})
 
-BONUS: Delete an Instructor
+BONUS: To delete an Instructor, simply get Instructor object by id and use 
+											session.delete(instructorReference)
+
+
+Bi-Directional Relationship
+* using Bi-Directional relationship we can start with InstructorDetail and make 
+	it back to the Instructor (get the associated object)
+* To use Bi-Directional, we can keep the existing database schema
+	- no changes requiredto database
+* Simply update the Java code
+
+* Development Process:
+1. Make updates to InstructorDetail class:
+	1) Add new field to reference Instructor
+	2) Add getter / setter methods for Instructor
+	3) Add @OneToOne annotation
+		- mappedBy
+2. Create Main App
+
+More on mappedBy
+* mappedBy tells Hibernate
+	- Look at the instructorDetail property in the Instructor class
+	- Use information from the Instructor class @JoinColumn
+	- To help find associated instructor
+
+Add support for Cascading
