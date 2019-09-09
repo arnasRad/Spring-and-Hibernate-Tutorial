@@ -1,0 +1,28 @@
+One-to-Many Mapping
+
+* An instructor can have many courses
+	- Bi-directional
+* Many courses can have one instructor
+	- Inverse / opposite of One-to-Many
+
+Real-World Project Requirement
+* If you delete an instructor, DO NOT delete the courses
+* If you delete a course, DO NOT delete the instructor
+* DO NOT APPLY CASCADING DELETES
+
+* Development Process
+1. Prep Work - Define database tables
+2. Create Course class
+	- annotate instructor field with @ManyToOne
+3. Update Instructor class
+	- @OneToMany
+4. Create Main App
+
+More on mappedBy
+* mappedBy tells Hibernate
+	- look at the instructor property in the Course class
+	- use information from the Course class @JoinColumn
+	- to help find associated courses for instructor
+Add support for Cascading
+	- DO NOT apply cascading deletes!
+
