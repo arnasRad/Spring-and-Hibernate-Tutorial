@@ -25,4 +25,3 @@ More on mappedBy
 	- to help find associated courses for instructor
 Add support for Cascading
 	- DO NOT apply cascading deletes!
-

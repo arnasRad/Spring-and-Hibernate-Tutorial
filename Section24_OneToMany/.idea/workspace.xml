@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="8d5013ed-8166-4d12-8471-a03f4cb3e315" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/com/arnasRad/onetoonedemo/DeleteCourseDemo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/arnasRad/onetoonedemo/GetInstructorCoursesDemo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/arnasRad/onetoonedemo/GetInstructorCoursesDemo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/arnasRad/onetoonedemo/HibernateUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/arnasRad/onetoonedemo/HibernateUtils.java" afterDir="false" />
-    </list>
+    <list default="true" id="8d5013ed-8166-4d12-8471-a03f4cb3e315" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -135,7 +131,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1568033564538</updated>
-      <workItem from="1568033685408" duration="2130000" />
+      <workItem from="1568033685408" duration="2251000" />
     </task>
     <task id="LOCAL-00001" summary="End of Video 230 - OneToMany relationship">
       <created>1568035591970</created>
@@ -144,7 +140,14 @@
       <option name="project" value="LOCAL" />
       <updated>1568035591970</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="End of Video 231 - Delete a course">
+      <created>1568035871240</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1568035871240</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -164,6 +167,7 @@
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="End of Video 230 - OneToMany relationship" />
-    <option name="LAST_COMMIT_MESSAGE" value="End of Video 230 - OneToMany relationship" />
+    <MESSAGE value="End of Video 231 - Delete a course" />
+    <option name="LAST_COMMIT_MESSAGE" value="End of Video 231 - Delete a course" />
   </component>
 </project>
