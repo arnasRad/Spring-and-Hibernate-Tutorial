@@ -91,6 +91,32 @@ public class HibernateUtils {
         }
     }
 
+    public static void deleteCourse(SessionFactory factory,
+                                    int courseId) {
+
+        // create session
+        Session session = factory.getCurrentSession();
+        try {
+
+            // start a transaction
+            session.beginTransaction();
+
+            // get the instructor from db
+            Course course = session.get(Course.class, courseId);
+
+            // delete course
+            System.out.println("Deleting course: " + course);
+
+            // delete the course
+            session.delete(course);
+
+            // commit the transaction
+            session.getTransaction().commit();
+        } finally {
+            session.close();
+        }
+    }
+
     public static void createCourses(SessionFactory factory,
                                     int instructorId,
                                     String[] courseNames) {

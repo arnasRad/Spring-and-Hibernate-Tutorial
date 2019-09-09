@@ -6,9 +6,7 @@ import com.arnasRad.onetoonedemo.entity.InstructorDetail;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
 
-import static com.arnasRad.onetoonedemo.HibernateUtils.getInstructorCourses;
-
-public class GetInstructorCoursesDemo {
+public class DeleteCourseDemo {
     public static void main(String[] args) {
         // create session factory
         SessionFactory factory = new Configuration()
@@ -20,7 +18,7 @@ public class GetInstructorCoursesDemo {
 
 
         try {
-            getInstructorCourses(factory, 1);
+            HibernateUtils.deleteCourse(factory, 10);
 
             System.out.println("Done!");
         } finally {
@@ -28,5 +26,4 @@ public class GetInstructorCoursesDemo {
             factory.close();
         }
     }
-
 }

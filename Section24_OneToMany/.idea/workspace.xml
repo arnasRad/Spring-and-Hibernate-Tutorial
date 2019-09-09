@@ -2,79 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8d5013ed-8166-4d12-8471-a03f4cb3e315" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/$PRODUCT_WORKSPACE_FILE$" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/artifacts/Section24_OneToMany_war_exploded.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Hibernate_5_4_4_5_4_4.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Spring_4_3_18_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Spring_MVC_4_3_18_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/mysql_connector_java_8_0_17.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Section24_OneToMany.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/FastInfoset-1.2.15.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/antlr-2.7.7.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/aopalliance-1.0.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/byte-buddy-1.9.11.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/classmate-1.3.4.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/commons-logging-1.2.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/dom4j-2.1.1.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/hibernate-commons-annotations-5.1.0.Final.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/hibernate-core-5.4.4.Final.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/istack-commons-runtime-3.0.7.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/jandex-2.0.5.Final.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/javassist-3.24.0-GA.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/javax.activation-api-1.2.0.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/javax.persistence-api-2.2.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/jaxb-api-2.3.1.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/jaxb-runtime-2.3.1.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/jboss-logging-3.3.2.Final.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/jboss-transaction-api_1.2_spec-1.1.1.Final.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/mysql-connector-java-8.0.17.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/spring-aop-4.3.18.RELEASE.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/spring-aspects-4.3.18.RELEASE.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/spring-beans-4.3.18.RELEASE.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/spring-context-4.3.18.RELEASE.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/spring-context-support-4.3.18.RELEASE.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/spring-core-4.3.18.RELEASE.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/spring-expression-4.3.18.RELEASE.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/spring-instrument-4.3.18.RELEASE.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/spring-instrument-tomcat-4.3.18.RELEASE.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/spring-jdbc-4.3.18.RELEASE.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/spring-jms-4.3.18.RELEASE.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/spring-messaging-4.3.18.RELEASE.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/spring-orm-4.3.18.RELEASE.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/spring-oxm-4.3.18.RELEASE.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/spring-test-4.3.18.RELEASE.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/spring-tx-4.3.18.RELEASE.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/spring-web-4.3.18.RELEASE.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/spring-webmvc-4.3.18.RELEASE.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/spring-webmvc-portlet-4.3.18.RELEASE.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/spring-websocket-4.3.18.RELEASE.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/stax-ex-1.8.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/txw2-2.3.1.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/notes.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/Section24_OneToMany/com/arnasRad/onetoonedemo/CreateInstructorDemo.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/Section24_OneToMany/com/arnasRad/onetoonedemo/HibernateUtils.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/Section24_OneToMany/com/arnasRad/onetoonedemo/entity/Course.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/Section24_OneToMany/com/arnasRad/onetoonedemo/entity/Instructor.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/Section24_OneToMany/com/arnasRad/onetoonedemo/entity/InstructorDetail.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/Section24_OneToMany/hibernate.cfg.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/arnasRad/onetoonedemo/CreateCoursesDemo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/arnasRad/onetoonedemo/CreateInstructorDemo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/arnasRad/onetoonedemo/GetInstructorCoursesDemo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/arnasRad/onetoonedemo/HibernateUtils.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/arnasRad/onetoonedemo/entity/Course.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/arnasRad/onetoonedemo/entity/Instructor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/arnasRad/onetoonedemo/entity/InstructorDetail.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/hibernate.cfg.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/WEB-INF/applicationContext.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/WEB-INF/dispatcher-servlet.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/WEB-INF/web.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/index.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Section22_Advanced-Mappings/Section22_Advanced-Mappings.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../Section22_Advanced-Mappings/Section22_Advanced-Mappings.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/arnasRad/onetoonedemo/DeleteCourseDemo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/arnasRad/onetoonedemo/GetInstructorCoursesDemo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/arnasRad/onetoonedemo/GetInstructorCoursesDemo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/arnasRad/onetoonedemo/HibernateUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/arnasRad/onetoonedemo/HibernateUtils.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -160,6 +90,19 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="DeleteCourseDemo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.arnasRad.onetoonedemo.DeleteCourseDemo" />
+      <module name="Section24_OneToMany" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.arnasRad.onetoonedemo.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="GetInstructorCoursesDemo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.arnasRad.onetoonedemo.GetInstructorCoursesDemo" />
       <module name="Section24_OneToMany" />
@@ -176,6 +119,7 @@
     <recent_temporary>
       <list>
         <item itemvalue="Application.GetInstructorCoursesDemo" />
+        <item itemvalue="Application.DeleteCourseDemo" />
         <item itemvalue="Application.CreateCoursesDemo" />
         <item itemvalue="Application.CreateInstructorDemo" />
       </list>
@@ -191,8 +135,16 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1568033564538</updated>
-      <workItem from="1568033685408" duration="1872000" />
+      <workItem from="1568033685408" duration="2130000" />
     </task>
+    <task id="LOCAL-00001" summary="End of Video 230 - OneToMany relationship">
+      <created>1568035591970</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1568035591970</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -211,5 +163,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="End of Video 230 - OneToMany relationship" />
+    <option name="LAST_COMMIT_MESSAGE" value="End of Video 230 - OneToMany relationship" />
   </component>
 </project>
