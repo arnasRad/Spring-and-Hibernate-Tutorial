@@ -1,0 +1,19 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="Section26_OneToMany_Unidirectional:war exploded">
+    <output-path>$PROJECT_DIR$/out/artifacts/Section26_OneToMany_Unidirectional_war_exploded</output-path>
+    <root id="root">
+      <element id="javaee-facet-resources" facet="Section26_OneToMany_Unidirectional/web/Web" />
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="Section26_OneToMany_Unidirectional" />
+        </element>
+        <element id="directory" name="lib">
+          <element id="library" level="project" name="Hibernate 5.4.4-5.4.4" />
+          <element id="library" level="project" name="Spring-4.3.18.RELEASE" />
+          <element id="library" level="project" name="Spring MVC-4.3.18.RELEASE" />
+          <element id="library" level="project" name="mysql-connector-java-8.0.17" />
+        </element>
+      </element>
+    </root>
+  </artifact>
+</component>

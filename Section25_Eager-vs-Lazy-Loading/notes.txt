@@ -50,3 +50,31 @@ More about Lazy Loading
 * Many other techniques available but the two above are most common
 
 FAQ How to load the courses at a later time in the application?
+
+
+Uni-directional
+
+* A course can have many reviews
+	- uni-directional
+
+Real-World Requirement
+* If you delete a course, also delete the reviews
+* Reviews without a course ... have no meaning
+* apply cascading deletes!
+
+* Development Process
+1. Prep Work - Define database tables
+2. Create Review class
+3. Update Course class
+	- JoinColumn(name="course_id")
+4. Create Main app
+
+More on @JoinColumn
+* In this scenario, @JoinColumn tells Hibernate
+	- look at the course_id column in the review table
+	- use this information to help find associated reviews for a course
+Add support for Cascading
+* CascadeType.ALL
+Add support for Lazy loading
+* fetch=FetchType.LAZY
+Add convenience method for adding reviews
