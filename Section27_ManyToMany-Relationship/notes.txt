@@ -1,0 +1,36 @@
+@ManyToMany
+
+Keep track of relationships
+* Need to track which student is in which course and vice-versa
+	- Join Table
+
+* Join Table - a table that provides a mapping between two tables
+	- it has foreign keys for each table to define the mapping relationship
+
+* Development Process
+1. Prep Work - Define database tables
+2. Update Course class
+3. Update Student class
+4. Create Main App
+
+More on @JoinTable
+* @JoinTable tells Hibernate
+	- look at the course_id column in the course_student table
+	- for other side (inverse), look at the student_id column in the course_student table
+	- use this information to find relationship between course and students
+	
+More on "inverse"
+* In this context, we are defining the relationship in the Course class
+* The Student class is on the "other side" ... so it is considered the "inverse"
+* "Inverse" refers to the "other side" of the relationship
+
+Real-World Project Requirement
+* If you delete a course, DO NOT delete the students
+* same applies to the "other side"
+* do not use cascading deletes!
+
+Other features
+* Lazy Loading of students and courses
+* Cascading to handle cascading saves ... but NOT deletes
+	- if we delete a course, DO NOT delete students
+	- if we delete a student, DO NOT delete courses
