@@ -1,0 +1,100 @@
+Build a Database Web App - Spring MVC and Hibernate Project
+
+Class Project
+* Full working Spring MVC and Hibernate application that connects to a database
+
+Customer Relationship Management CRM
+* Set up Database Dev Environment
+* List Customers
+* Add a new Customer
+* Update a Customer
+* Delete a Customer
+
+Test DB Connection
+1. Set up our Eclipse project
+2. Add JDBC Driver for MySQL
+3. Sanity test ... make sure we can connect
+
+Setup Dev Environment
+1. Copy starter config files
+	- web.xml and spring config
+2. Copy over JSTL libs
+3. Copy latest Spring JAR files
+4. Copy latest Hibernate JAR files
+
+Configuration for Spring + Hibernate
+1. Define database dataSource / connection pool
+2. Setup Hibernate session factory
+3. Setup Hibernate transaction manager
+4. Enable configuration of transactional annotations
+
+CRM Big Picture
+1. web browser makes a request over to customer controller
+2. customer controller makes use of a data access object DAO
+3. data access object accesses the database
+4. we get the data back from the database
+5. controller places the data into Spring MVC model and then 
+								send that over to the JSP pages
+6. JSP renders the data to the screen
+
+Customer Data Access Object
+* Responsible for interfacing with the database
+* This is a common design pattern: Data Access Object (DAO)
+* Customer DAO (CRUD) methods:
+	- saveCustomer(...)
+	- getCustomer(...)
+	- getCustomers(...)
+	- updateCustomer(...)
+	- deleteCustomer(...)
+	
+List Customers
+* Development Process
+1. Create Customer.java
+2. Create CustomerDAO.java
+	- and CustomerDAOImpl.java
+3. Create CustomerController.java
+4. Create JSP page: list-customers.jsp
+
+Developing Hibernate DAO
+* For Hibernate, our DAO needs a Hibernate SessionFactory
+* Our Hibernate SessionFactory needs a Data Source
+	- the data source defines database connection info
+* These are all dependencies
+	- we will wire them together with Dependency Injection (DI)
+
+Customer DAO
+1. Define DAO interface
+2. Define DAO implementation
+	- Inject the session factory
+
+Spring @Transactional
+* 'Autmagically' begins and ends a transaction for your Hibernate code
+	- no need for you to explicitly do this in your code
+* This Spring magic happens behind the scenes
+* Place @Transactional annotation at the beginning of your method
+
+Specialized Annotation for DAOs
+* @Repository annotation
+	- @Component for Java Beans
+	- @Controller for Spring MVC
+	- @ Repository for DAO implementations
+* Applied to DAO Implementations
+* Spring will automatically register the DAO implementation
+	- thanks to component-scanning
+* Spring also provides translation of any JDBC related exceptions
+
+
+Applying CSS
+* Development Process
+1. Place CSS in a 'resources' directory
+2. Configure Spring to serve up 'resources' directory
+	- <mvc:resources location="/resources/" mapping="/resources/**" />
+	- location: physical directory name
+	- mapping: url mapping ** to recurse subdirectories
+3. Reference CSS in your JSP
+
+Add a Welcome File
+	- http://localhost:8080/web-customer-tracker
+1. Server will look for a welcome file
+2. If it doesn't find one, then you'll get 404
+3. Welcome files are configured in web.xml

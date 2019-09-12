@@ -1,0 +1,21 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="Section28_Build-a-Database-Web-App:war exploded">
+    <output-path>$PROJECT_DIR$/out/artifacts/Section28_Build_a_Database_Web_App_war_exploded</output-path>
+    <root id="root">
+      <element id="javaee-facet-resources" facet="Section28_Build-a-Database-Web-App/web/Web" />
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="Section28_Build-a-Database-Web-App" />
+        </element>
+        <element id="directory" name="lib">
+          <element id="library" level="project" name="Spring-4.3.18.RELEASE" />
+          <element id="library" level="project" name="Spring MVC-4.3.18.RELEASE" />
+          <element id="library" level="project" name="Hibernate 5.4.4-5.4.4" />
+          <element id="library" level="project" name="mysql-connector-java-8.0.17" />
+          <element id="library" level="project" name="c3p0-0.9.5.3" />
+          <element id="library" level="project" name="javax.servlet-3.0" />
+        </element>
+      </element>
+    </root>
+  </artifact>
+</component>
