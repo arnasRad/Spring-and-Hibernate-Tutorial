@@ -172,3 +172,18 @@ Add Customer
 2. Create HTML form for new customer
 3. Process Form Data
 	- Controller -> Service -> DAO
+	
+Update Customer
+* Each row has an Update link
+	- current customer id embedded in link
+* When clicked
+	- will load the customer from database
+	- prepopulate the form
+
+* Development Process
+1. Update list-customers.jsp
+	- new "Update" link
+2. Create customer-form.jsp
+	- prepopulate the form
+3. Process form data
+	- Controller -> Service -> DAO

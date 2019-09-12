@@ -1,15 +1,11 @@
 package com.arnasRad.springdemo.controller;
 
-import com.arnasRad.springdemo.dao.CustomerDAO;
 import com.arnasRad.springdemo.entity.Customer;
 import com.arnasRad.springdemo.service.CustomerService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -58,5 +54,19 @@ public class CustomerController {
         customerService.saveCustomer(customer);
 
         return "redirect:/customer/list";
+    }
+
+    @GetMapping("/showFormForUpdate")
+    public String showFormForUpdate(@RequestParam("customerId") int theId,
+                                    Model model) {
+
+        // get the customer from our customer service
+        Customer customer = customerService.getCustomer(theId);
+
+        // set customer as a model attribute to pre-populate the form
+        model.addAttribute("customer", customer);
+
+        // send over to our form
+        return "customer-form";
     }
 }
