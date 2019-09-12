@@ -187,3 +187,16 @@ Update Customer
 	- prepopulate the form
 3. Process form data
 	- Controller -> Service -> DAO
+	
+
+Delete Customer
+* Each row has a Delete link
+	- current customer id embedded in link
+* When clicked
+	- prompt user
+	- will delete the customer from database
+	
+* Development Process
+1. Add "Delete" link on JSP
+2. Add code for "Delete"
+	- Controller -> Service -> DAO
