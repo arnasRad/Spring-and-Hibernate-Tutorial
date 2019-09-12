@@ -98,3 +98,68 @@ Add a Welcome File
 1. Server will look for a welcome file
 2. If it doesn't find one, then you'll get 404
 3. Welcome files are configured in web.xml
+
+
+@GetMapping and @PostMapping
+
+Most Commonly Used HTTP Methods
+* GET - Requests data from a given resource
+* POST - Submits data to a given resource
+
+Sending Data with GET method
+* <form action="processForm" method="GET" ...>
+	...
+  </form>
+* Form data is added to end of URL as name / value pairs
+	- theUrl?field1=value1&field2=value2...
+	
+Handling Form Submission
+@RequestMapping("/processForm")
+public String processForm(...) {
+	...
+}
+* This mapping handles ALL HTTP methods
+	- GET, POST, etc...
+
+Constrain the Request Mapping - GET
+@RequestMapping(..., method=RequestMethod.GET)
+public String...
+* This mapping ONLY handles GET method
+* Any other HTTP REQUEST methods will get rejected
+
+@GetMapping - a shortcut
+
+same applies for @PostMapping
+
+Which one to use?
+GET
+* Good for debugging
+* Bookmark or email URL
+* Limitations on data length
+	- ~1000 characters
+
+POST
+* Can't bookmark or email URL
+* No limitations on data length
+* Can also send binary data
+
+Add a Service Layer
+* sits between Customer Controller and Customer DAO
+
+Purpose of Service Layer
+* Service Facade design pattern
+* Intermediate layer for custom business logic
+* Integrate data from multiple sources (DAO/repositories)
+
+@Service annotation
+* Applied to Service implementations
+* Spring will automatically register the Service implementation
+
+* Development Process
+1. Define Service interface
+2. Define Service implementation
+	- inject the CustomerDAO
+
+Best practice for using DAOs and services together - 
+	let the service define transactional layer and then 
+						the DAOs run in that same context
