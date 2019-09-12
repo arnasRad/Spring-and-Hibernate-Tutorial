@@ -163,3 +163,12 @@ Purpose of Service Layer
 Best practice for using DAOs and services together - 
 	let the service define transactional layer and then 
 						the DAOs run in that same context
+						
+
+Add Customer
+* Development Process
+1. Update list-customer.jsp
+	- New "Add Customer" button
+2. Create HTML form for new customer
+3. Process Form Data
+	- Controller -> Service -> DAO
