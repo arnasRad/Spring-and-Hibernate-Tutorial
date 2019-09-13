@@ -1,4 +1,5 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <%--
   Created by IntelliJ IDEA.
   User: arnas
@@ -29,10 +30,24 @@
 
             <!-- put new button: Add Customer -->
 
-            <input type="button" value="Add Customer"
-                   onclick="window.location.href='showFormForAdd'; return false;"
-                   class="add-button"
-            />
+            <div>
+                <input type="button" value="Add Customer"
+                       onclick="window.location.href='showFormForAdd'; return false;"
+                       class="add-button"
+                />
+                <input type="button" value="Refresh List"
+                       onclick="window.location.href='list'; return false;"
+                       class="add-button"
+                />
+            </div>
+
+            <!-- add an html search box -->
+            <form:form action="search" method="get">
+
+                Search customer: <input type="text" name="searchName" />
+                <input type="submit" value="Search" class="add-button">
+
+            </form:form>
 
             <!-- add our html table here -->
             <table>

@@ -79,4 +79,33 @@ public class CustomerController {
         // send over to our form
         return "redirect:list";
     }
+
+    // add a mapping to handle search form submission
+    @GetMapping("/search")
+    public String searchCustomers(@RequestParam("searchName") String searchName,
+                                  Model model) {
+
+        // search customers from the service
+        List<Customer> customers =
+                customerService.searchCustomers(searchName);
+
+        // add the customers to the model
+        model.addAttribute("customers", customers);
+
+        return "list-customers";
+    }
+
+    // add a mapping to handle list refresh
+    @GetMapping("/refresh")
+    public String refreshCustomers(Model model) {
+
+        // get all customers from the service
+        List<Customer> customers =
+                customerService.getCustomers();
+
+        // add the customers to the model
+        model.addAttribute("customers", customers);
+
+        return "list-customers";
+    }
 }
