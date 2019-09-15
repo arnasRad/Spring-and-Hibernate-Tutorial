@@ -1,0 +1,186 @@
+AOP - Aspect Oriented Programming
+
+Two Main Problems
+* Code Tangling
+	- For a given method: addAccount(...)
+	- We have logging and security code tangled in
+* Code Scattering
+	- If we need to change logging or security code
+	- We have to update ALL classes
+
+AOP
+* Programming technique based on concept of an Aspect
+* Aspect encapsulates cross-cutting logic
+	- Cross-Cutting Concerns
+* "Concern" means logic / functionality
+
+see diagram in video 315 7:30
+
+Aspects
+* Aspects can be reused at multiple locations
+* Same aspect / class ... applied based on configuration
+
+AOP Solution
+* Apply the Proxy design pattern
+
+Benefits of AOP
+* Code for Aspect is defined in a single class
+	- much better than being scattered everywhere
+	- promotes code reuse and easier to change
+* Business code in your application is cleaner
+	- only applies to business functionality: addAccount
+	- reduces code complexity
+* Configurable
+	- based on configuration, apply Aspects selectively to different parts of app
+	- no need to make changes to main application code ... very important!
+	
+Additional AOP Use Cases
+* Most common
+	- logging, security, transactions
+* Audit logging
+	- who, what, when, where
+* Exception handling
+	- log exception and notify DevOps team via SMS / email
+* API Management
+	- how many times has a method been called user
+	- analytics: what are peak times? what is avarage load? who is top user?
+	
+Advantages
+* Reusable modules
+* Resolve code tangling
+* Resolve code scatter
+* Applied selectively based on configuration
+
+Disadvantages
+* Too many aspects and app flow is hard to follow
+* Minor performance cost for aspect execution (run-time weaving)
+
+
+AOP Terminology
+* Aspect - module of code for a cross-cutting concern (logging, security, ...)
+* Advice - what action is taken and when it should be applied
+* Join Point - when to apply code during program execution
+* Pointcut - a predicate expression for where advice should be applied
+
+Advice Types
+* Before advice - run before the method
+* After finally advice - run after the method (finally)
+* After returning advice - run after the method (success execution)
+* After throwing advice - run after the method (if exception thrown)
+* Around advice - run before and after the method
+
+Weaving
+* Connecting aspects to target object to create an advised object
+* Different types of weaving
+	- compile-time, load-time or run-time
+* Regarding performance: run-time weaving is the slowest
+
+Leading AOP Frameworks
+* Spring AOP
+	- Spring provides AOP support
+	- Key component of Spring
+		-> Security, transactions, caching etc
+	- Uses run-time weaving of aspects
+* AspectJ
+	- Original AOP framework, released in 2001
+		-> www.eclipse.org/aspectj
+	- Provides complete support for AOP
+	- Rich support for
+		-> join points: method-level, constructor, field
+		-> code weaving: compile-time, post compile-time and load-time
+
+Spring AOP Comparison
+* Advantages
+	- Simpler to use than AspectJ
+	- Uses Proxy pattern
+	- Can migrate to AspectJ when using @Aspect annotation
+* Disadvantages
+	- Only supports method-level join points
+	- Can only apply aspects to beans created by Spring app context
+	- Minor performance cost for aspect execution (run-time weaving)
+	
+AspectJ Comparison
+* Advantages
+	- Support all join points (method-level, constructor, field)
+	- Works with any POJO, not just beans from app context
+	- Faster performance compared to Spring AOP
+	- Complete AOP support
+* Disadvantages
+	- Compile-time weaving requires extra compilation step
+	- AspectJ pointcut syntax can become complex
+
+* Spring AOP is a light implementation of AOP
+* Solves common problems in enterprise applications
+Recommendation
+* Start with Spring AOP ... easy to get started with
+* If you have complex requirements then move to AspectJ
+
+Additional Resources
+* Spring Refernce Manual: www.spring.io
+* AspectJ in Action
+	- by Raminvas Laddad
+* Aspect-Oriented Development with Use Cases
+	- by Ivar Jacobson and Pan-Wei Ng
+	
+Our Spring AOP Roadmap
+* Create Aspects
+* Develop Advices
+	- Before, After returning, After throwing
+	- After finally, Around
+* Create Pointcut expressions
+* Apply it to our big CRM project (Spring MVC + Hibernate)
+
+@Before Advice Use Cases
+* Most common
+	- logging, security, transactions
+* Audit logging
+	- who, what, when, where
+* API Management
+	- how many times has a method been called user
+	- analytics: what are peak times? What is average load? Who is top user?
+
+Downlaod AspectJ JAR File
+	- www.luv2code.com/download-aspectjweaver
+
+* Development Process
+1. Create target object: AccountDAO
+2. Create Spring Java Config class
+	- @EnableAspectJAutoProxy
+3. Create main app
+4. Create an Aspect with @Before advice
+
+Best Practices: Aspect and Advices
+* Keep the code small
+* Keep the code fast
+* Do not perform any expensive / slow operations
+* Get in and out as QUICKLY as possible
+
+
+Pointcut Expressions
+* Pointcut - a predicate expression for where advice should be applied
+
+* Spring AOP uses AspectJ's pointcut expression language
+* We will start with execution pointcuts
+	- applies to execution of methods
+
+Math on Method's name
+* execution(modifiers-pattern? return-type-pattern declaring-type-pattern?
+			method-name-pattern(param-pattern) throws-pattern?)
+	- Modifiers: Spring AOP only supports public or *
+	- Return type: void, boolean, String, List<Customer>...
+	- Declaring type: the class name
+	- Method name to match
+	- Parameter types to match
+	- Exception types to match
+	- Pattern is optional if it has "?"
+	- Patterns can use wildcards; * matches on everything
+* Match only addAccount() method in AccountDAO class
+	- @Before("execution(public void com.arnasRad.aopdemo.dao.AccountDAO.addAccount())")
+* Match any addAccount() method in any class
+	- @Before("execution(public void addAccount())")
+* Match methods starting with add in any class
+	- @Before("execution(public void add*())")
+* Use wildcards on modifier and return type
+	- @Before("execution(* * processCreditCard*())")
+* Modifier is optional ... so you don't have to list it
+	- @Before("execution(* processCreditCard*())")
